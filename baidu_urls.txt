@@ -1,1 +1,4 @@
 https://mashiro1995.gitee.io/2020/10/24/Scala%E5%92%8CChisel%E7%9A%84%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/
+https://mashiro1995.gitee.io/2020/10/24/Nutshell%E5%88%9D%E4%BD%93%E9%AA%8C/
+https://mashiro1995.gitee.io/2020/10/21/apng2gif%E5%90%84%E7%A7%8D%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3/
+https://mashiro1995.gitee.io/2020/10/20/%E9%80%9A%E8%BF%87GitHub%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2/
