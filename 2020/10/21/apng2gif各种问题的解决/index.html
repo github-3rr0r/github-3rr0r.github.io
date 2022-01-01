@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>apng2gif各种问题的解决 | 3rr0r&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="记录一段花了将近三年才解决的apng转换为gif的经历。Menhera酱赛高！">
+<meta property="og:type" content="article">
+<meta property="og:title" content="apng2gif各种问题的解决">
+<meta property="og:url" content="https://github-3rr0r.github.io/2020/10/21/apng2gif%E5%90%84%E7%A7%8D%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3/index.html">
+<meta property="og:site_name" content="3rr0r&#39;s Blog">
+<meta property="og:description" content="记录一段花了将近三年才解决的apng转换为gif的经历。Menhera酱赛高！">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://github-3rr0r.github.io/2020/10/21/apng2gif%E5%90%84%E7%A7%8D%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3/apng2gif%E5%90%84%E7%A7%8D%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3/NanaseKurumi.jpg">
+<meta property="og:image" content="https://github-3rr0r.github.io/2020/10/21/apng2gif%E5%90%84%E7%A7%8D%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3/apng2gif%E5%90%84%E7%A7%8D%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3/NanaseKonomi.jpg">
+<meta property="og:image" content="https://github-3rr0r.github.io/2020/10/21/apng2gif%E5%90%84%E7%A7%8D%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3/apng2gif%E5%90%84%E7%A7%8D%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3/e38e75791d5535498e6c9c0b3463f07.jpg">
+<meta property="og:image" content="https://github-3rr0r.github.io/2020/10/21/apng2gif%E5%90%84%E7%A7%8D%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3/apng2gif%E5%90%84%E7%A7%8D%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3/69594924.gif">
+<meta property="og:image" content="https://github-3rr0r.github.io/2020/10/21/apng2gif%E5%90%84%E7%A7%8D%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3/apng2gif%E5%90%84%E7%A7%8D%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3/1603255890727.png">
+<meta property="og:image" content="https://github-3rr0r.github.io/2020/10/21/apng2gif%E5%90%84%E7%A7%8D%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3/apng2gif%E5%90%84%E7%A7%8D%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3/new69594922.gif">
+<meta property="og:image" content="https://github-3rr0r.github.io/2020/10/21/apng2gif%E5%90%84%E7%A7%8D%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3/apng2gif%E5%90%84%E7%A7%8D%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3/newani.gif">
+<meta property="og:image" content="https://github-3rr0r.github.io/2020/10/21/apng2gif%E5%90%84%E7%A7%8D%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3/apng2gif%E5%90%84%E7%A7%8D%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3/1603256906973.png">
+<meta property="og:image" content="https://github-3rr0r.github.io/2020/10/21/apng2gif%E5%90%84%E7%A7%8D%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3/apng2gif%E5%90%84%E7%A7%8D%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3/1603257569580.png">
+<meta property="og:image" content="https://github-3rr0r.github.io/2020/10/21/apng2gif%E5%90%84%E7%A7%8D%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3/apng2gif%E5%90%84%E7%A7%8D%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3/ani.gif">
+<meta property="og:image" content="https://github-3rr0r.github.io/2020/10/21/apng2gif%E5%90%84%E7%A7%8D%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3/apng2gif%E5%90%84%E7%A7%8D%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3/ani2.gif">
+<meta property="og:image" content="https://github-3rr0r.github.io/2020/10/21/apng2gif%E5%90%84%E7%A7%8D%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3/apng2gif%E5%90%84%E7%A7%8D%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3/107433842.gif">
+<meta property="og:image" content="https://github-3rr0r.github.io/2020/10/21/apng2gif%E5%90%84%E7%A7%8D%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3/apng2gif%E5%90%84%E7%A7%8D%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3/48859426.gif">
+<meta property="article:published_time" content="2020-10-21T03:46:36.000Z">
+<meta property="article:modified_time" content="2020-10-21T06:07:48.116Z">
+<meta property="article:author" content="Github-3rr0r">
+<meta property="article:tag" content="杂事">
+<meta property="article:tag" content="apng">
+<meta property="article:tag" content="apng2gif">
+<meta property="article:tag" content="apng转gif">
+<meta property="article:tag" content="图片处理">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://github-3rr0r.github.io/2020/10/21/apng2gif%E5%90%84%E7%A7%8D%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3/apng2gif%E5%90%84%E7%A7%8D%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3/NanaseKurumi.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="3rr0r's Blog" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.0.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">3rr0r&#39;s Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">3rr0r&#39;s Blog on Github</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS 订阅"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://github-3rr0r.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-apng2gif各种问题的解决" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2020/10/21/apng2gif%E5%90%84%E7%A7%8D%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3/" class="article-date">
+  <time class="dt-published" datetime="2020-10-21T03:46:36.000Z" itemprop="datePublished">2020-10-21</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      apng2gif各种问题的解决
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="事情起因"><a href="#事情起因" class="headerlink" title="事情起因"></a>事情起因</h2><p>追溯起来已经是两年多以前的事情了，当时有个表情包在Line上火了起来，之后血洗国内各大平台，这个表情包就是<strong>Menhera酱</strong>。</p>
+<p><img src="apng2gif%E5%90%84%E7%A7%8D%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3/NanaseKurumi.jpg" alt="NanaseKurumi"></p>
+<p><img src="apng2gif%E5%90%84%E7%A7%8D%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3/NanaseKonomi.jpg" alt="NanaseKonomi"></p>
+<p>谁会抗拒可爱的事物呢？所以当时我就立志要把她们的表情包都给要了，最开始就是通过网友们的搬运，在百度网盘等地方收集。</p>
+<p>但是时间久了，Menhera酱的热度也下去了，没有多少人再收集了，有多少人的喜欢能像我一样始终如一呢？</p>
+<p>这时候我强迫症就来了，收集不完整那多难受啊，所以我决定亲自上Line收集。</p>
+<p>上Line是需要魔法的，当时用了点魔法，又在Chrome上找了个插件，成功地把所有她们的表情都下载了下来。</p>
+<p>但是！</p>
+<p>Line上的动图是PNG格式的，更准确地来说是APNG格式的，这样的动图在微信上是用不了的，放上去就是张不动的图片，甚至背景还是黑乎乎的。</p>
+<p>微信只支持GIF的动图，这我可忍不了，必须得给安排了！</p>
+<h2 id="艰辛的转换历程"><a href="#艰辛的转换历程" class="headerlink" title="艰辛的转换历程"></a>艰辛的转换历程</h2><h3 id="找工具阶段"><a href="#找工具阶段" class="headerlink" title="找工具阶段"></a>找工具阶段</h3><p>最开始肯定是找别人做好的批量转换的工具，关键词搜apng2gif，当然有一堆博文和工具了。</p>
+<p>尝试了一个据说很好用的工具isparta，下载了很久很久很久才下载好。转换时间很长，但结果转换出来很多都有问题，在电脑上可以正常播放，但发送到微信上<strong>一遍播放完了就会花屏</strong>。</p>
+<p><img src="apng2gif%E5%90%84%E7%A7%8D%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3/e38e75791d5535498e6c9c0b3463f07.jpg" alt="e38e75791d5535498e6c9c0b3463f07"></p>
+<p>感觉可能是版本bug，就有花了好久下载其他版本，结果都不好用，只能放弃了这个软件。</p>
+<p>然后又找到了一个在线转换的网站，需要配置很多参数，生成了一张试试效果居然还不错。</p>
+<p>但是这个网站毕竟在线的，自动化程度不高，网络连接也比较慢，批量处理肯定是个大工程，只好放弃了。</p>
+<p>这是第一次尝试。</p>
+<h3 id="自己造轮子阶段"><a href="#自己造轮子阶段" class="headerlink" title="自己造轮子阶段"></a>自己造轮子阶段</h3><p>后来的某一天又想起了这件事，决定重新思考一下怎么弄。</p>
+<p>APNG格式诞生这么长时间了，肯定有很多资料吧？</p>
+<p>思路是这样的，APNG是动图，肯定是由很多帧组成的，把这些帧给提取出来，然后再合成GIF不就行了？</p>
+<p>找了一些资料，写了一个python程序，导出了一张APNG的各帧。</p>
+<p>结果发现问题很大，APNG的每一帧并不是完整的一张图片，而是和上一帧有变化的地方！</p>
+<p>最后合成出来的东西就很鬼畜，参见下图：</p>
+<p><img src="apng2gif%E5%90%84%E7%A7%8D%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3/69594924.gif" alt="69594924"></p>
+<p>心情就很不美丽了，费这么大劲你给我合成出了啥奇怪的东西？</p>
+<p>又在Github上找到了一个湾湾同胞写的python程序，反复调试运行都没法得到正确结果。</p>
+<p>后来也有构思，还是解析合成的思路，只要把每一帧放在相应的坐标就行了，但是想了想太复杂就放弃了。</p>
+<p>这是第二次尝试</p>
+<h3 id="改造轮子阶段"><a href="#改造轮子阶段" class="headerlink" title="改造轮子阶段"></a>改造轮子阶段</h3><p>这两天看到了七濑胡桃公众号推送的文章，其中有一张可爱的动图，就转发给了对象，结果她直呼好可爱！</p>
+<p>虽然尝试了那么多次，也失败了那么多次，但是这次一定要成功。</p>
+<h4 id="发现新轮子"><a href="#发现新轮子" class="headerlink" title="发现新轮子"></a>发现新轮子</h4><p>思路还是先看看有没有现成的轮子，当然是有的！</p>
+<p>我尝试了pip中的apng2gif包，完全不好使，甚至正常播放都不行。于是去找到了源代码，结果……</p>
+<p>这不就是我上次参考的那个Github上的源代码吗？</p>
+<p>放弃！</p>
+<p>但是，我在命令行中不小心输入了apng2gif，忘记了加后缀，结果提示我可以通过apt安装？</p>
+<p>原来Linux上也是有现成轮子可以用的！赶紧apt了下来。</p>
+<p>这个程序的使用很简单：</p>
+<p><img src="apng2gif%E5%90%84%E7%A7%8D%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3/1603255890727.png" alt="1603255890727"></p>
+<p>试了一张APNG动图，导出的GIF效果居然还挺好？</p>
+<p>立刻发到微信上试试，结果还是<strong>播放一遍就花屏</strong>，果然还是不靠谱。</p>
+<h4 id="给轮子加一轮转换"><a href="#给轮子加一轮转换" class="headerlink" title="给轮子加一轮转换"></a>给轮子加一轮转换</h4><p>但是这个播放一遍就花屏问题，似乎就是因为它只循环了一遍？那我只需要把GIF的循环设置为一直循环不就可以了？</p>
+<p>可惜的是这个工具并没有这个选项。</p>
+<p>不过现在又可以造轮子了呀，这次只需要解析GIF的每一帧，然后合成，保存的时候设置loop为0就行了！</p>
+<p>遗憾的是这么做还是存在问题。</p>
+<p>有一个保存选项是disposal，设置为3的时候不会出现重影，但是存在部分帧只显示一部分的情况。</p>
+<p><img src="apng2gif%E5%90%84%E7%A7%8D%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3/new69594922.gif" alt="new69594922"></p>
+<p>disposal设置为1或0的时候虽然会显示完整，但是会有重影。</p>
+<p><img src="apng2gif%E5%90%84%E7%A7%8D%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3/newani.gif" alt="newani"></p>
+<p>再然后就是关于duration的奇怪问题，即使设置新gif的duration（帧间时长）和旧的duration一样，最后导出的gif的duration会变成两倍，不知何故！设置为一半时反而可以一样。</p>
+<p><img src="apng2gif%E5%90%84%E7%A7%8D%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3/1603256906973.png" alt="1603256906973"></p>
+<p>总之还是有问题的。</p>
+<h4 id="换个方式给轮子加一轮转换"><a href="#换个方式给轮子加一轮转换" class="headerlink" title="换个方式给轮子加一轮转换"></a>换个方式给轮子加一轮转换</h4><p>既然这个轮子和我的需求只相差一个loop的值的问题，那我直接修改那个值不就好了？</p>
+<p>GIF文件中肯定有特定的位用来存放loop的值。去找了GIF文件格式，也不知怎么搞的，网上都是互相转载的，没有找到直接的资料，最后找到一份代码中倒是有文件的详细结构。</p>
+<p>经过分析，对文件进行16进制搜索，找到“NETSCAPE2.0”，再往后数第三、四个字节就是了。</p>
+<p><img src="apng2gif%E5%90%84%E7%A7%8D%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3/1603257569580.png" alt="1603257569580"></p>
+<p>将荧光笔标记的01改成00，loop就从一次变成无限循环了（下面两张分别为循环一次和无数次）。</p>
+<p><img src="apng2gif%E5%90%84%E7%A7%8D%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3/ani.gif" alt="ani"></p>
+<p><img src="apng2gif%E5%90%84%E7%A7%8D%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3/ani2.gif" alt="ani2"></p>
+<p>这个方案确实有效！</p>
+<p>那么编程思路也很简单，以16进制的方式读取文件，然后匹配并找到“NETSCAPE2.0”，确定loop值对应的位置，然后将值直接修改为0保存即可。</p>
+<h4 id="修改轮子"><a href="#修改轮子" class="headerlink" title="修改轮子"></a>修改轮子</h4><p>但是我没有按照上一部分的思路去写程序，别问，问就是懒。</p>
+<p>我们换个思路，既然apng2gif这个工具最后合成了GIF，必然也写入了loop位，我们直接修改该工具的源代码不就可以了？</p>
+<p>费了好大劲从SourceForge上下载了源码，因为下载各种失败，然后切换镜像。</p>
+<p>找到源代码之后就简单了，在代码中合成GIF之前的位置，加入一句代码即可：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">num_loops = <span class="number">0</span>;</span><br></pre></td></tr></table></figure>
+
+<p>重新make生成可执行文件，再尝试转换发现达到了想要的效果。</p>
+<p>make过程中提示“-lpng”选项的问题，通过apt安装<code>libpng-dev</code>即可：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install libpng-dev</span><br></pre></td></tr></table></figure>
+
+<h4 id="编写批处理程序"><a href="#编写批处理程序" class="headerlink" title="编写批处理程序"></a>编写批处理程序</h4><p>那么接下来，把执行apng2gif的过程变成批处理即可，这一步用shell或python都行，我用的是python（因为这段时间写了个千余行的shell脚本，现在不想写shell了）。</p>
+<p>程序很简单，扫描所有后缀为.png的文件，调用apng2gif程序转换到gif文件夹下。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">trans</span>(<span class="params">filename</span>):</span></span><br><span class="line">    os.system(<span class="string">&quot;./apng2gif &quot;</span>+filename+<span class="string">&quot; gif/&quot;</span>+filename[:-<span class="number">4</span>]+<span class="string">&quot;.gif&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    <span class="keyword">for</span> filename <span class="keyword">in</span> os.listdir(<span class="string">&#x27;.&#x27;</span>):</span><br><span class="line">        <span class="keyword">if</span> filename.endswith(<span class="string">&#x27;.png&#x27;</span>):</span><br><span class="line">            trans(filename)</span><br></pre></td></tr></table></figure>
+
+<p>所以折腾了这么久，真正有效的代码量只有修改轮子1句c代码和批处理中的7句python代码（python代码甚至可以精简成三句！）？</p>
+<p>其中<strong>解决问题</strong>的方式不一定难，但<strong>探索的过程</strong>一定艰难且有趣。</p>
+<p><img src="apng2gif%E5%90%84%E7%A7%8D%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3/107433842.gif" alt="107433842"></p>
+<p><strong>保持好奇</strong>是探索发现的最大动力源泉。</p>
+<p><img src="apng2gif%E5%90%84%E7%A7%8D%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3/48859426.gif" alt="48859426"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://github-3rr0r.github.io/2020/10/21/apng2gif%E5%90%84%E7%A7%8D%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3/" data-id="ckxvk0isf0000qi6c6qyd10x6" data-title="apng2gif各种问题的解决" class="article-share-link">分享</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/apng/" rel="tag">apng</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/apng2gif/" rel="tag">apng2gif</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/apng%E8%BD%ACgif/" rel="tag">apng转gif</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%9B%BE%E7%89%87%E5%A4%84%E7%90%86/" rel="tag">图片处理</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%9D%82%E4%BA%8B/" rel="tag">杂事</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2022/01/01/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前一篇</strong>
+      <div class="article-nav-title">
+        
+          Hello World
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/10/20/%E9%80%9A%E8%BF%87GitHub%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">后一篇</strong>
+      <div class="article-nav-title">通过GitHub搭建Hexo博客</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Blog%E6%90%AD%E5%BB%BA/" rel="tag">Blog搭建</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Github-Pages/" rel="tag">Github Pages</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/apng/" rel="tag">apng</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/apng2gif/" rel="tag">apng2gif</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/apng%E8%BD%ACgif/" rel="tag">apng转gif</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9B%BE%E7%89%87%E5%A4%84%E7%90%86/" rel="tag">图片处理</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9D%82%E4%BA%8B/" rel="tag">杂事</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" rel="tag">环境搭建</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Blog%E6%90%AD%E5%BB%BA/" style="font-size: 10px;">Blog搭建</a> <a href="/tags/Github-Pages/" style="font-size: 10px;">Github Pages</a> <a href="/tags/apng/" style="font-size: 10px;">apng</a> <a href="/tags/apng2gif/" style="font-size: 10px;">apng2gif</a> <a href="/tags/apng%E8%BD%ACgif/" style="font-size: 10px;">apng转gif</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/%E5%9B%BE%E7%89%87%E5%A4%84%E7%90%86/" style="font-size: 10px;">图片处理</a> <a href="/tags/%E6%9D%82%E4%BA%8B/" style="font-size: 10px;">杂事</a> <a href="/tags/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" style="font-size: 10px;">环境搭建</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/01/">一月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">十月 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2022/01/01/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2020/10/21/apng2gif%E5%90%84%E7%A7%8D%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3/">apng2gif各种问题的解决</a>
+          </li>
+        
+          <li>
+            <a href="/2020/10/20/%E9%80%9A%E8%BF%87GitHub%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2/">通过GitHub搭建Hexo博客</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2022 Github-3rr0r<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
