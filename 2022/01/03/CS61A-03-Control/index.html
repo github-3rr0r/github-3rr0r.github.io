@@ -22,16 +22,16 @@
 <script class="next-config" data-name="main" type="application/json">{"hostname":"github-3rr0r.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.9.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":{"gitalk":{"order":-2}},"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 <meta name="description" content="UC Berkeley CS61A —— The Structure and Interpretation of Computer Programs —— Lecture 3 —— 控制">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CS61A——控制">
-<meta property="og:url" content="https://github-3rr0r.github.io/2022/01/02/CS61A-03-Control/index.html">
+<meta property="og:title" content="CS61A——Lec-03-控制">
+<meta property="og:url" content="https://github-3rr0r.github.io/2022/01/03/CS61A-03-Control/index.html">
 <meta property="og:site_name" content="3rr0r&#39;s Blog">
 <meta property="og:description" content="UC Berkeley CS61A —— The Structure and Interpretation of Computer Programs —— Lecture 3 —— 控制">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://github-3rr0r.github.io/2022/01/02/CS61A-03-Control/image-20220102201925477.png">
-<meta property="og:image" content="https://github-3rr0r.github.io/2022/01/02/CS61A-03-Control/image-20220102203248591.png">
-<meta property="og:image" content="https://github-3rr0r.github.io/2022/01/02/CS61A-03-Control/image-20220102203325345.png">
-<meta property="article:published_time" content="2022-01-02T09:53:31.000Z">
-<meta property="article:modified_time" content="2022-01-03T09:28:58.602Z">
+<meta property="og:image" content="https://github-3rr0r.github.io/2022/01/03/CS61A-03-Control/image-20220102201925477.png">
+<meta property="og:image" content="https://github-3rr0r.github.io/2022/01/03/CS61A-03-Control/image-20220102203248591.png">
+<meta property="og:image" content="https://github-3rr0r.github.io/2022/01/03/CS61A-03-Control/image-20220102203325345.png">
+<meta property="article:published_time" content="2022-01-03T09:04:31.000Z">
+<meta property="article:modified_time" content="2022-01-03T11:05:05.236Z">
 <meta property="article:author" content="Github-3rr0r">
 <meta property="article:tag" content="CS61A">
 <meta property="article:tag" content="UC Berkeley">
@@ -39,17 +39,17 @@
 <meta property="article:tag" content="入门级别课程">
 <meta property="article:tag" content="Homework">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://github-3rr0r.github.io/2022/01/02/CS61A-03-Control/image-20220102201925477.png">
+<meta name="twitter:image" content="https://github-3rr0r.github.io/2022/01/03/CS61A-03-Control/image-20220102201925477.png">
 
 
-<link rel="canonical" href="https://github-3rr0r.github.io/2022/01/02/CS61A-03-Control/">
+<link rel="canonical" href="https://github-3rr0r.github.io/2022/01/03/CS61A-03-Control/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://github-3rr0r.github.io/2022/01/02/CS61A-03-Control/","path":"2022/01/02/CS61A-03-Control/","title":"CS61A——控制"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://github-3rr0r.github.io/2022/01/03/CS61A-03-Control/","path":"2022/01/03/CS61A-03-Control/","title":"CS61A——Lec-03-控制"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>CS61A——控制 | 3rr0r's Blog</title>
+<title>CS61A——Lec-03-控制 | 3rr0r's Blog</title>
   
 
 
@@ -204,7 +204,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://github-3rr0r.github.io/2022/01/02/CS61A-03-Control/">
+    <link itemprop="mainEntityOfPage" href="https://github-3rr0r.github.io/2022/01/03/CS61A-03-Control/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -217,7 +217,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          CS61A——控制
+          CS61A——Lec-03-控制
         </h1>
 
         <div class="post-meta-container">
@@ -227,15 +227,9 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2022-01-02 17:53:31" itemprop="dateCreated datePublished" datetime="2022-01-02T17:53:31+08:00">2022-01-02</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-01-03 17:28:58" itemprop="dateModified" datetime="2022-01-03T17:28:58+08:00">2022-01-03</time>
+      <time title="创建时间：2022-01-03 17:04:31 / 修改时间：19:05:05" itemprop="dateCreated datePublished" datetime="2022-01-03T17:04:31+08:00">2022-01-03</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -279,7 +273,7 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sixteen = square_it(<span class="number">4</span>)</span><br><span class="line"><span class="built_in">sum</span> = sixteen + <span class="number">4</span>     <span class="comment"># 🚫 TypeError!</span></span><br></pre></td></tr></table></figure>
 
 <p>类型错误（TypeError）：</p>
-<p><img src="/2022/01/02/CS61A-03-Control/image-20220102201925477.png" alt="image-20220102201925477"></p>
+<p><img src="/2022/01/03/CS61A-03-Control/image-20220102201925477.png" alt="image-20220102201925477"></p>
 <h3 id="副作用-1"><a href="#副作用-1" class="headerlink" title="副作用"></a>副作用</h3><p>副作用指的是调用函数时，除了返回值以外发生的其他的事。</p>
 <p>如果常见的调用<code>print()</code>函数时会在控制台输出字符：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(-<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
@@ -298,9 +292,9 @@
 <h3 id="嵌套print-语句"><a href="#嵌套print-语句" class="headerlink" title="嵌套print()语句"></a>嵌套<code>print()</code>语句</h3><p>一个嵌套的<code>print()</code>语句：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="built_in">print</span>(<span class="number">1</span>), <span class="built_in">print</span>(<span class="number">2</span>))</span><br></pre></td></tr></table></figure>
 
-<p><img src="/2022/01/02/CS61A-03-Control/image-20220102203248591.png" alt="image-20220102203248591"></p>
+<p><img src="/2022/01/03/CS61A-03-Control/image-20220102203248591.png" alt="image-20220102203248591"></p>
 <p>输出结果为：</p>
-<img src="/2022/01/02/CS61A-03-Control/image-20220102203325345.png" alt="image-20220102203325345" style="zoom:50%;">
+<img src="/2022/01/03/CS61A-03-Control/image-20220102203325345.png" alt="image-20220102203325345" style="zoom:50%;">
 
 <h2 id="更多的函数特性"><a href="#更多的函数特性" class="headerlink" title="更多的函数特性"></a>更多的函数特性</h2><h3 id="默认参数"><a href="#默认参数" class="headerlink" title="默认参数"></a>默认参数</h3><p>在函数签名中，参数可以指定一个默认值，如果没传值那就使用默认值。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">calculate_dog_age</span>(<span class="params">human_years, multiplier = <span class="number">7</span></span>):</span></span><br><span class="line">    <span class="keyword">return</span> human_years * multiplier</span><br></pre></td></tr></table></figure>
@@ -660,13 +654,13 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2022/01/02/CS61A-01-Welcome!/" rel="prev" title="CS61A——Welcome!">
-                  <i class="fa fa-chevron-left"></i> CS61A——Welcome!
+                <a href="/2022/01/02/CS61A-02-Functions/" rel="prev" title="CS61A——Lec-02-函数">
+                  <i class="fa fa-chevron-left"></i> CS61A——Lec-02-函数
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2022/01/02/CS61A-02-Functions/" rel="next" title="CS61A——函数">
-                  CS61A——函数 <i class="fa fa-chevron-right"></i>
+                <a href="/2022/01/03/CS61A-Labs/" rel="next" title="CS61A——Labs（更新至Lab-01）">
+                  CS61A——Labs（更新至Lab-01） <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
@@ -718,7 +712,7 @@
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
 
-<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"github-3rr0r","repo":"blogtalk","client_id":"f0e321088b5ac38ab3b5","client_secret":"42df4ba69286980a606894095fc9d4e8610d8c7d","admin_user":"github-3rr0r","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":null,"js":{"url":"https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js","integrity":"sha256-Pmj85ojLaPOWwRtlMJwmezB/Qg8BzvJp5eTzvXaYAfA="},"path_md5":"9ba3e08b1dfdd5fdc51e6daf03ecec3e"}</script>
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"github-3rr0r","repo":"blogtalk","client_id":"f0e321088b5ac38ab3b5","client_secret":"42df4ba69286980a606894095fc9d4e8610d8c7d","admin_user":"github-3rr0r","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":null,"js":{"url":"https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js","integrity":"sha256-Pmj85ojLaPOWwRtlMJwmezB/Qg8BzvJp5eTzvXaYAfA="},"path_md5":"a2038c41c6b4851c41de40b259e92825"}</script>
 <script src="/js/third-party/comments/gitalk.js"></script>
 
 </body>
