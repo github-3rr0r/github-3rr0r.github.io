@@ -23,27 +23,31 @@
 <meta name="description" content="UC Berkeley CS61A —— The Structure and Interpretation of Computer Programs —— Lecture 4 —— 高阶函数">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CS61A——高阶函数">
-<meta property="og:url" content="https://github-3rr0r.github.io/2022/01/05/CS61A-04-High-Order%20Functions/index.html">
+<meta property="og:url" content="https://github-3rr0r.github.io/2022/01/05/CS61A-04-High-Order-Functions/index.html">
 <meta property="og:site_name" content="3rr0r&#39;s Blog">
 <meta property="og:description" content="UC Berkeley CS61A —— The Structure and Interpretation of Computer Programs —— Lecture 4 —— 高阶函数">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://github-3rr0r.github.io/2022/01/05/CS61A-04-High-Order%20Functions/image-20220105005210508.png">
+<meta property="og:image" content="https://github-3rr0r.github.io/2022/01/05/CS61A-04-High-Order-Functions/image-20220105005019911-16413150219371.png">
+<meta property="og:image" content="https://github-3rr0r.github.io/2022/01/05/CS61A-04-High-Order-Functions/image-20220105005210508.png">
+<meta property="og:image" content="https://github-3rr0r.github.io/2022/01/05/CS61A-04-High-Order-Functions/image-20220105010215638.png">
+<meta property="og:image" content="https://github-3rr0r.github.io/2022/01/05/CS61A-04-High-Order-Functions/image-20220105010805023.png">
+<meta property="og:image" content="https://github-3rr0r.github.io/2022/01/05/CS61A-04-High-Order-Functions/image-20220105012645366.png">
 <meta property="article:published_time" content="2022-01-04T16:29:47.000Z">
-<meta property="article:modified_time" content="2022-01-04T17:39:25.930Z">
+<meta property="article:modified_time" content="2022-01-04T17:45:03.712Z">
 <meta property="article:author" content="Github-3rr0r">
 <meta property="article:tag" content="CS61A">
 <meta property="article:tag" content="UC Berkeley">
 <meta property="article:tag" content="The Structure and Interpretation of Computer Programs">
 <meta property="article:tag" content="入门级别课程">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://github-3rr0r.github.io/2022/01/05/CS61A-04-High-Order%20Functions/image-20220105005210508.png">
+<meta name="twitter:image" content="https://github-3rr0r.github.io/2022/01/05/CS61A-04-High-Order-Functions/image-20220105005019911-16413150219371.png">
 
 
-<link rel="canonical" href="https://github-3rr0r.github.io/2022/01/05/CS61A-04-High-Order%20Functions/">
+<link rel="canonical" href="https://github-3rr0r.github.io/2022/01/05/CS61A-04-High-Order-Functions/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://github-3rr0r.github.io/2022/01/05/CS61A-04-High-Order%20Functions/","path":"2022/01/05/CS61A-04-High-Order Functions/","title":"CS61A——高阶函数"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://github-3rr0r.github.io/2022/01/05/CS61A-04-High-Order-Functions/","path":"2022/01/05/CS61A-04-High-Order-Functions/","title":"CS61A——高阶函数"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
 <title>CS61A——高阶函数 | 3rr0r's Blog</title>
@@ -201,7 +205,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://github-3rr0r.github.io/2022/01/05/CS61A-04-High-Order%20Functions/">
+    <link itemprop="mainEntityOfPage" href="https://github-3rr0r.github.io/2022/01/05/CS61A-04-High-Order-Functions/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -226,7 +230,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2022-01-05 00:29:47 / 修改时间：01:39:25" itemprop="dateCreated datePublished" datetime="2022-01-05T00:29:47+08:00">2022-01-05</time>
+      <time title="创建时间：2022-01-05 00:29:47 / 修改时间：01:45:03" itemprop="dateCreated datePublished" datetime="2022-01-05T00:29:47+08:00">2022-01-05</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -304,10 +308,10 @@
 <h3 id="维拉汉卡-斐波那契数字生成"><a href="#维拉汉卡-斐波那契数字生成" class="headerlink" title="维拉汉卡-斐波那契数字生成"></a>维拉汉卡-斐波那契数字生成</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">vf_number</span>(<span class="params">n</span>):</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;Compute the nth Virahanka-Fibonacci number, for N &gt;= 1.</span></span><br><span class="line"><span class="string">    &gt;&gt;&gt; vf_number(2)</span></span><br><span class="line"><span class="string">    1</span></span><br><span class="line"><span class="string">    &gt;&gt;&gt; vf_number(6)</span></span><br><span class="line"><span class="string">    8</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span> </span><br><span class="line">    prev = <span class="number">0</span>  <span class="comment"># First Fibonacci number</span></span><br><span class="line">    curr = <span class="number">1</span>  <span class="comment"># Second Fibonacci number</span></span><br><span class="line">    k = <span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span> k &lt; n: </span><br><span class="line">        (prev, curr) = (curr, prev + curr)</span><br><span class="line">        k += <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> curr</span><br></pre></td></tr></table></figure>
 
 <p>这里用了个循环来解决。</p>
-<h3 id="黄金螺旋"><a href="#黄金螺旋" class="headerlink" title="黄金螺旋"></a>黄金螺旋</h3><p>![image-20220105005019911](CS61A-04-High-Order Functions/image-20220105005019911-16413150219371.png)</p>
+<h3 id="黄金螺旋"><a href="#黄金螺旋" class="headerlink" title="黄金螺旋"></a>黄金螺旋</h3><p><img src="/2022/01/05/CS61A-04-High-Order-Functions/image-20220105005019911-16413150219371.png" alt="image-20220105005019911"></p>
 <p>黄金螺旋也可以近似看做维拉汉卡-斐波那契数列。</p>
 <p>据说熊身上都有黄金螺旋，多少有点强行了。</p>
-<img src="/2022/01/05/CS61A-04-High-Order%20Functions/image-20220105005210508.png" alt="image-20220105005210508" style="zoom: 33%;">
+<img src="/2022/01/05/CS61A-04-High-Order-Functions/image-20220105005210508.png" alt="image-20220105005210508" style="zoom: 33%;">
 
 <h2 id="设计函数"><a href="#设计函数" class="headerlink" title="设计函数"></a>设计函数</h2><h3 id="描述函数"><a href="#描述函数" class="headerlink" title="描述函数"></a>描述函数</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">square</span>(<span class="params">x</span>):</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;Returns the square of x.&quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">return</span> x * x</span><br></pre></td></tr></table></figure>
 
@@ -336,7 +340,7 @@
 
 <p><strong>别自己重复</strong>（DRY，<strong>Don’t Repeat Yourself</strong>）：只实现一个过程，执行很多次。</p>
 <h2 id="一般化"><a href="#一般化" class="headerlink" title="一般化"></a>一般化</h2><h3 id="通过参数一般化模式"><a href="#通过参数一般化模式" class="headerlink" title="通过参数一般化模式"></a>通过参数一般化模式</h3><p>几何形状有相似的面积公式：</p>
-<p>![image-20220105010215638](CS61A-04-High-Order Functions/image-20220105010215638.png)</p>
+<p><img src="/2022/01/05/CS61A-04-High-Order-Functions/image-20220105010215638.png" alt="image-20220105010215638"></p>
 <h3 id="一个非一般化的方法"><a href="#一个非一般化的方法" class="headerlink" title="一个非一般化的方法"></a>一个非一般化的方法</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> math <span class="keyword">import</span> pi, sqrt</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">area_square</span>(<span class="params">r</span>):</span></span><br><span class="line">    <span class="keyword">return</span> r * r</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">area_circle</span>(<span class="params">r</span>):</span></span><br><span class="line">    <span class="keyword">return</span> r * r * pi</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">area_hexagon</span>(<span class="params">r</span>):</span></span><br><span class="line">    <span class="keyword">return</span> r * r * (<span class="number">3</span> * sqrt(<span class="number">3</span>) / <span class="number">2</span>)</span><br></pre></td></tr></table></figure>
 
 <p>怎么一般化共同结构呢？</p>
@@ -349,7 +353,7 @@
 </ol>
 <p>其他函数都认为是一阶方程。</p>
 <h3 id="计算过程上的一般化"><a href="#计算过程上的一般化" class="headerlink" title="计算过程上的一般化"></a>计算过程上的一般化</h3><p>函数间的共同结构可能是一个计算过程，而不止是一个数，比如：</p>
-<p>![image-20220105010805023](CS61A-04-High-Order Functions/image-20220105010805023.png)</p>
+<p><img src="/2022/01/05/CS61A-04-High-Order-Functions/image-20220105010805023.png" alt="image-20220105010805023"></p>
 <h3 id="函数作为参数"><a href="#函数作为参数" class="headerlink" title="函数作为参数"></a>函数作为参数</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">cube</span>(<span class="params">k</span>):</span></span><br><span class="line">    <span class="keyword">return</span> k ** <span class="number">3</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">summation</span>(<span class="params">n, term</span>):</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;Sum the first N terms of a sequence.</span></span><br><span class="line"><span class="string">    &gt;&gt;&gt; summation(5, cube)</span></span><br><span class="line"><span class="string">    225</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    total = <span class="number">0</span></span><br><span class="line">    k = <span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span> k &lt;= n:</span><br><span class="line">        total = total + term(k)</span><br><span class="line">        k = k + <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> total</span><br></pre></td></tr></table></figure>
 
 <h2 id="函数作为返回值"><a href="#函数作为返回值" class="headerlink" title="函数作为返回值"></a>函数作为返回值</h2><h3 id="局部定义的函数"><a href="#局部定义的函数" class="headerlink" title="局部定义的函数"></a>局部定义的函数</h3><p>定义在其他函数体内的函数会绑定到局部帧的命名。</p>
@@ -379,7 +383,7 @@
 </ol>
 <p>不同点：</p>
 <p>只有<code>def</code>语句给了函数一个固有名称，可以在环境图中看到，但不影响执行，只在打印的时候有区别。</p>
-<p>![image-20220105012645366](CS61A-04-High-Order Functions/image-20220105012645366.png)</p>
+<p><img src="/2022/01/05/CS61A-04-High-Order-Functions/image-20220105012645366.png" alt="image-20220105012645366"></p>
 <h3 id="lambda作为参数"><a href="#lambda作为参数" class="headerlink" title="lambda作为参数"></a>lambda作为参数</h3><p>要把简单函数作为参数的时候用lambda表达式很方便：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 原始方法</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">cube</span>(<span class="params">k</span>):</span></span><br><span class="line">    <span class="keyword">return</span> k ** <span class="number">3</span></span><br><span class="line"></span><br><span class="line">summation(<span class="number">5</span>, cube)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 用lambda表达式</span></span><br><span class="line">summation(<span class="number">5</span>, <span class="keyword">lambda</span> k: k ** <span class="number">3</span>)</span><br></pre></td></tr></table></figure>
 
@@ -523,7 +527,7 @@
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
 
-<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"github-3rr0r","repo":"blogtalk","client_id":"f0e321088b5ac38ab3b5","client_secret":"42df4ba69286980a606894095fc9d4e8610d8c7d","admin_user":"github-3rr0r","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":null,"js":{"url":"https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js","integrity":"sha256-Pmj85ojLaPOWwRtlMJwmezB/Qg8BzvJp5eTzvXaYAfA="},"path_md5":"5bfc7d59b069b51262944687a1702df5"}</script>
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"github-3rr0r","repo":"blogtalk","client_id":"f0e321088b5ac38ab3b5","client_secret":"42df4ba69286980a606894095fc9d4e8610d8c7d","admin_user":"github-3rr0r","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":null,"js":{"url":"https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js","integrity":"sha256-Pmj85ojLaPOWwRtlMJwmezB/Qg8BzvJp5eTzvXaYAfA="},"path_md5":"df97e6323d73a57ea55c0fced48b51b4"}</script>
 <script src="/js/third-party/comments/gitalk.js"></script>
 
 </body>
